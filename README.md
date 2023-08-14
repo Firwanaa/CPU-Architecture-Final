@@ -275,8 +275,10 @@ storage A                    mem[A] = ACC
 ```
 
 - **Stack**: TOC implicit in instructions
-	```
-push B                        stk[TOS++] = mem[B]
-
-
 ```
+push B                        stk[TOS++] = mem[B]
+push C                        stk[TOS++] = mem[C]
+add                           stk[TOS++] = stk[--TOS] + stk[--TOS]
+pop A                         mem[A]     = stk[--TOS] 
+```
+
