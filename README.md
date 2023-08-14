@@ -313,3 +313,7 @@ store R1, A               mem[A] = R1
 - **Rank Good -> Bad**: load-store, stack, accumulator, memory
 
 **Upshot**: most new ISAs are load-store or hybrids.  
+
+
+
+# Week 9
