@@ -50,10 +50,10 @@ Control bus: control and coordinating activities of the two other buses.
 - Application -> user request
 
 - CPU only process information in RAM 
-- 1945 - 1955 no operating system, no translation programs needed because we were using machine language
-  to write programs 
+- 1945 - 1955 no operating system, no translation programs needed because we were using machine language to write programs.
+- No Utility software: Because we were programming in machine language babe, compilers for noobs.  
 
-- Monoprogramming: loads ONE instruction to CPU, have to SWAP each time need to process new instruction
+- Monogramming: loads ONE instruction to CPU, have to SWAP each time need to process new instruction
 - Multiprogramming: can have many processes at a time, CPU can SWITCH to a different instructions. 
 
 - Batch processing: Group of similar jobs
@@ -105,6 +105,7 @@ Control bus: control and coordinating activities of the two other buses.
 - Level 2: Machine - Instruction Set Architecture 
 - Level 1: Control - Microcode or Hardwired 
 - Level 0: Digital Logic - Circuits, gates, etc.
+
 
  - Stack-based operations
   - LIFO ?
