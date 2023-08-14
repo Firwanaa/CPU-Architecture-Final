@@ -109,18 +109,78 @@ Control bus: control and coordinating activities of the two other buses.
 
 ## Programming model
 - Determined by how processor, architecture deals with internal (CPU registers) and external RAM memory management during program execution.
-- Defines how instructions access their operands and how instructions are described in the processor's assembly language./
+- Defines how instructions access their operands and how instructions are described in the processor's assembly language.
+# CPU Architecture Week 8 Summary
 
+## Programming Models
 
- - Stack-based operations
-  - LIFO ?
-  - Push and POP ?
--> example ?
+- The **programming model** is determined by how the processor architecture manages internal (CPU registers) and external (RAM) memory during program execution.
+- It defines how instructions access operands and how instructions are described in the processor's assembly language.
+
+## Two Programming Models
+
+There are two primary programming models:
+
+1. **Stack-Based Architectures:**
+   - Internal CPU register set is hidden from the program.
+   - Instructions read operands from and write results to a stack in memory (LIFO data structure).
+   - Basic operations include PUSH and POP.
+
+   **Example: Compute 3*7+2**
+   ```assembly
+   PUSH 2
+   PUSH 7
+   PUSH 3
+   MUL
+   ADD
+   ```
+
+```
+After PUSH 2:
+-----
+|  2  |
+-----
+After PUSH 7:
+-----
+|  7  |
+-----
+|  2  |
+-----
+After PUSH 3:
+-----
+|  3  |
+-----
+|  7  |
+-----
+|  2  |
+-----
+After MUL:
+-----
+| 21  |
+-----
+|  2  |
+-----
+After ADD:
+-----
+| 23  |
+-----
+
+```
+
+2. **General-Purpose Register (GPR) Architectures:**
+    
+    - Instructions access operands from and write results to a random-access register set in the CPU.
+    - Operands and results are specified by referencing register addresses.
+
 
 - RISC and CISC <- MCQ
 
 - Example week 8 slide (49)
 - All models week 8 - slide (56)
 
-
+PUSH 2
+PUSH 7
+PUSH 3
+MUL
+ADD
 
