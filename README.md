@@ -274,7 +274,7 @@ add  C                       ACC = ACC + mem[C]
 storage A                    mem[A] = ACC
 ```
 
-- **Stack**: TOC implicit in instructions
+- **Stack** : TOC implicit in instructions
 ```
 push B                        stk[TOS++] = mem[B]
 push C                        stk[TOS++] = mem[C]
