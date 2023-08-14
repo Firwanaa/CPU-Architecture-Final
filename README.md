@@ -256,6 +256,7 @@ MULT B, A
 1. **MULT B, A**
    - Multiply the values of A and B to generate the result.
 
+--------------------------------------------------
 ## All models week 8 - slide (54-59)
 - **Sequential Model**: The program counter (PC) defines total order on dynamic instruction 
 - **Memory Only**: ***Slides are screenshots***
@@ -312,6 +313,7 @@ store R1, A               mem[A] = R1
 
 **Upshot**: most new ISAs are load-store or hybrids.  
 
-
+--------------------------------------------------
+--------------------------------------------------
 
 # Week 9
