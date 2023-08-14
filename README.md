@@ -100,9 +100,9 @@ Computer programs that are when executed provides desired function and performan
 - 5- Kernel accesses a dispatch table with service routine pointers using the call number.
 - 6- Service routine executes, control returns, and mode switches back to user.
 - 7- Library function interprets results, returns to user process.
-
  
 --------------------------------------------------
+
 ### Levels of Computer Architecture - Slide (36)
 - Level 6: User - Executable programs 
 - Level 5: High-Level Programming - C++, Java, FORTRAN, etc. 
