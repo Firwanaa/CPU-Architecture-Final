@@ -257,5 +257,26 @@ MULT B, A
 
 
 - All models week 8 - slide (56)
+	- **Sequential Model**: The program counter (PC) defines total order on dynamic instruction 
+	- **Memory Only**: ***Slides are screenshots***
+		> Slide(55) where (other than memory) can operands come from? and how are they specified? **No Clue!!!*
+		> Example A = B + C
+		> Several options 
+		- memory only:
+```
+Add B, C, A                  mem[A] = mem[B] + mem[C]
+```
+
+- **Accumulator**: Implicit single element storage
+```
+load B                       ACC = mem[B]
+add  C                       ACC = ACC + mem[C]
+storage A                    mem[A] = ACC
+```
+
+- **Stack**: TOC implicit in instructions
+	```
+push B                        stk[TOS++] = mem[B]
 
 
+```
