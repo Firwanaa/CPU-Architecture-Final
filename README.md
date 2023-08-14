@@ -1,13 +1,18 @@
-# CPU-Architecture-Final
-Week8-Review: He was flying, this what i was able to write down.
+# CPU Architecture Final
+# Week 8
+## He was flying, this what i was able to write down.
 
-- CPU: Three sub-units
-- ALU
-  - Arithmitic operations: + , -, *, /
-  - Logical: >, < , <=, <=, !=
+### CPU: Three sub-units:
+	- Control Unit
+	- Memeroy Unit
+	- Aritmitic Logical Unit 
+		  - Arithmitic operations: + , -, *, /
+		  - Logical: >, < , <=, <=, !=
 
-- MCQ: Cash memory and RAM
-- Written: Define Voltile Memory
+### MCQ: Cash memory and RAM
+	- Ram is the Primary storage. Volatile storage, temporary storage. 
+
+-Written: Define Voltile Memory
 - ROM, Permenanent Storage, BIOS
 
 - Firmware
