@@ -9,6 +9,7 @@
 	  - Arithmetic operations: + , -, *, /
 	  - Logical: >, < , <=, <=, !=
 
+--------------------------------------------------
 ### MCQ: Cash memory, ROM and RAM
 - RAM is the Primary storage. Volatile storage, temporary storage. 
 - ROM: Read-only memory, permanent, BIOS. 
@@ -17,6 +18,7 @@
 ### Define Volatile Memory <- nothing in week 8:
 But it's a type of memory that maintain its data only while it's powered. If power is interrupted the data is lost. 
 
+--------------------------------------------------
 ### He mentioned this during the review for the first time. No clue what is the context. Have fun.. 
 - Firmware
 - Freeware
@@ -30,7 +32,8 @@ But it's a type of memory that maintain its data only while it's powered. If pow
     
 
 These terms describe different ways in which software is distributed and accessed by users.
-## System Bus:
+--------------------------------------------------
+### System Bus:
 	MCQ
 	Written
 Control bus: control and coordinating activities of the two other buses.  
@@ -98,6 +101,8 @@ Control bus: control and coordinating activities of the two other buses.
 - 7- Library function interprets results, returns to user process.
 
  - Week 8- Slide (36)
+ 
+--------------------------------------------------
 ### Levels of Computer Architecture 
 - Level 6: User - Executable programs 
 - Level 5: High-Level Programming - C++, Java, FORTRAN, etc. 
@@ -107,6 +112,7 @@ Control bus: control and coordinating activities of the two other buses.
 - Level 1: Control - Microcode or Hardwired 
 - Level 0: Digital Logic - Circuits, gates, etc.
 
+--------------------------------------------------
 ### Programming Models
 
 - The **programming model** is determined by how the processor architecture manages internal (CPU registers) and external (RAM) memory during program execution.
@@ -187,6 +193,7 @@ After ADD:
 
 - GPR compilers provide better performance.
 
+--------------------------------------------------
 ## ISA and CPU Design Styles
 
 ### Different ISA for Different CPUs
