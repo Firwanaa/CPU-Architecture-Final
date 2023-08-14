@@ -117,7 +117,7 @@ Control bus: control and coordinating activities of the two other buses.
 - The **programming model** is determined by how the processor architecture manages internal (CPU registers) and external (RAM) memory during program execution.
 - It defines how instructions access operands and how instructions are described in the processor's assembly language.
 
-## Two Programming Models
+# Programming Models: Stack-Based and GPR Architectures
 
 There are two primary programming models:
 
@@ -125,6 +125,23 @@ There are two primary programming models:
    - Internal CPU register set is hidden from the program.
    - Instructions read operands from and write results to a stack in memory (LIFO data structure).
    - Basic operations include PUSH and POP.
+
+   ### Stack Operations:
+   - **PUSH:** Adds an argument to the top of the stack.
+   - **POP:** Removes the top value from the stack and returns it to the CPU.
+
+   ### Stack Implementation:
+   - Operates as a last-in-first-out (LIFO) data structure.
+   - Values are added to the top of the stack.
+   - Data can only be removed from the top of the stack.
+   - Implemented using memory buffers.
+   - May lead to stack overflow error if data exceeds allocated space.
+
+## Advantages of Stack-Based Architectures
+
+- Instructions require fewer bits to encode.
+- Register management is automatic.
+- Instruction set remains unchanged.
 
    **Example: Compute 3*7+2**
 ```assembly
@@ -168,14 +185,8 @@ After ADD:
 ```
 
 2. **General-Purpose Register (GPR) Architectures:**
-    
-    - Instructions access operands from and write results to a random-access register set in the CPU.
-    - Operands and results are specified by referencing register addresses.
-## Advantages of Stack-Based Architectures
-
-- Instructions require fewer bits to encode.
-- Register management is automatic.
-- Instruction set remains unchanged.
+   - Instructions access operands from and write results to a random-access register set in the CPU.
+   - Operands and results are specified by referencing register addresses.
 
 ## Advantages of GPR Architectures
 
@@ -214,9 +225,7 @@ After ADD:
 - Specific memory access instructions.
 - One instruction executed per clock cycle.
 - Instructions are of the same size and fixed.
-# Example: A = A * B
 
-## RISC
 # Example: A = A * B
 
 ## RISC
