@@ -46,6 +46,7 @@ Control bus: control and coordinating activities of the two other buses.
 	- Interpreter: Converts and execute high-level program one line at a time (line by line)
 	- Assembler
 
+--------------------------------------------------
 - System software -> System request
 - Application -> user request
 
@@ -77,7 +78,7 @@ Control bus: control and coordinating activities of the two other buses.
   - Device management
   - Information maintenance
   - Communications
-
+-------------------------------------------------------------------
 #### Semantics of System call execution: 100% in the final 
 - 1- The user process calls a **library function**
 - 2- The library function sets **system call parameters** (including arguments, return, address, and call number) in designated location like register or stack
