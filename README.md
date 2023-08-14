@@ -127,13 +127,13 @@ There are two primary programming models:
    - Basic operations include PUSH and POP.
 
    **Example: Compute 3*7+2**
-   ```assembly
+```assembly
    PUSH 2
    PUSH 7
    PUSH 3
    MUL
    ADD
-   ```
+```
 
 ```
 After PUSH 2:
