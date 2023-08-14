@@ -171,16 +171,82 @@ After ADD:
     
     - Instructions access operands from and write results to a random-access register set in the CPU.
     - Operands and results are specified by referencing register addresses.
+## Advantages of Stack-Based Architectures
+
+- Instructions require fewer bits to encode.
+- Register management is automatic.
+- Instruction set remains unchanged.
+
+## Advantages of GPR Architectures
+
+- GPR compilers provide better performance.
+
+# ISA and CPU Design Styles
+
+## Different ISA for Different CPUs
+
+- Different CPUs implement distinct sets of instructions.
+- Examples include ARM, Intel x86, IBM/Motorola PowerPC (Macintosh), MIPS, and Intel IA32.
+
+## Two CPU Design Styles
+
+1. **RISC (Reduced Instruction Set Computing):**
+   - Involves a small set of highly optimized instructions.
+   - Instructions typically perform simple tasks.
+   - Focuses on executing instructions quickly.
+
+2. **CISC (Complex Instruction Set Computing):**
+   - Features a larger, more complex set of instructions.
+   - Some instructions can perform complex tasks directly.
+   - Emphasizes code compactness.
+
+## Historical Comparison: RISC vs. CISC
+
+### Complex Instruction Set Computing (CISC)
+- Examples: x86 architecture.
+- Larger instruction set with intricate instructions built into hardware.
+- Variable length instructions.
+- Multiple clock cycles per instruction.
+
+### Reduced Instruction Set Computing (RISC)
+- Examples: ARM architecture.
+- Smaller, highly optimized set of instructions.
+- Specific memory access instructions.
+- One instruction executed per clock cycle.
+- Instructions are of the same size and fixed.
+# Example: A = A * B
+
+## RISC
+# Example: A = A * B
+
+## RISC
+
+```assembly
+LOAD A, eax
+LOAD B, ebx
+PROD eax, ebx
+STORE ebx, A
+```
+1. **LOAD A, eax**
+   - Load the value of A into register eax.
+
+2. **LOAD B, ebx**
+   - Load the value of B into register ebx.
+
+3. **PROD eax, ebx**
+   - Multiply the values in registers eax and ebx.
+
+4. **STORE ebx, A**
+   - Store the result from register ebx into variable A.
+
+## CISC
+```assebly
+MULT B, A
+```
+1. **MULT B, A**
+   - Multiply the values of A and B to generate the result.
 
 
-- RISC and CISC <- MCQ
-
-- Example week 8 slide (49)
 - All models week 8 - slide (56)
 
-PUSH 2
-PUSH 7
-PUSH 3
-MUL
-ADD
 
