@@ -79,28 +79,27 @@ Control bus: control and coordinating activities of the two other buses.
   - Communications
 
 #### Semantics of System call execution:
-  1- The user process calls a library function
-  2- The library function sets system call parameters (including arguments, return, address, and call number) 
-     in designated location like register or stack
-  3- A trap instruction shifts the mode form user mode to kernal mode, transfaring control to the OS.
-  4- The OS identifies the system call by examining the call number parameter received from the library function
-  5- Using the call number, the kernal access a dispatch table containing pointers to service routines for various system calls.
-  6- The relevant service routine executes, control returns to the user program after the trap instructions, and the mode swtiches back to user from system. 
-  7- The library function processes the instruction after the trap, interprets kernal return value, and return to the user process.
+- 1- The user process calls a library function
+- 2- The library function sets system call parameters (including arguments, return, address, and call number) in designated location like register or stack
+- 3- A trap instruction shifts the mode form user mode to kernel mode, transfaring control to the OS.
+- 4- The OS identifies the system call by examining the call number parameter received from the library function
+- 5- Using the call number, the kernel access a dispatch table containing pointers to service routines for various system calls.
+- 6- The relevant service routine executes, control returns to the user program after the trap instructions, and the mode switches back to user from system. 
+- 7- The library function processes the instruction after the trap, interprets kernal return value, and return to the user process.
 
 ### Summery for the 7 steps by ChatGpt:
- 1- User process calls a library function.
- 2- Library function prepares system call parameters.
- 3- Trap instruction switches mode to kernel, yielding control to the OS.
- 4- OS identifies the system call based on the provided call number.
- 5- Kernel accesses a table with service routine pointers using the call number.
- 6- Service routine executes, control returns, and mode switches back to user.
- 7- Library function interprets results, returns to user process.
+- 1- User process calls a library function.
+- 2- Library function prepares system call parameters.
+- 3- Trap instruction switches mode to kernel, yielding control to the OS.
+- 4- OS identifies the system call based on the provided call number.
+- 5- Kernel accesses a table with service routine pointers using the call number.
+- 6- Service routine executes, control returns, and mode switches back to user.
+- 7- Library function interprets results, returns to user process.
 
  - Week 8- Slide (36)
 ## Levels of Computer Architecture 
 - Level 6: User - Executable programs 
-- Level 5: High-Level Programming - C++, Java, Fortran, etc. 
+- Level 5: High-Level Programming - C++, Java, FORTRAN, etc. 
 - Level 4: Assembly Language - Assembly code 
 - Level 3: System Software - Operating system, library code 
 - Level 2: Machine - Instruction Set Architecture 
