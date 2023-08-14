@@ -36,9 +36,9 @@ But it's a type of memory that maintain its data only while it's powered. If pow
 ### System Bus:
 	MCQ
 	Written
-Control bus: control and coordinating activities of the two other buses.  
-    - Address bus: Carry memory address
-    - Data bus: Carry data 
+**Control bus**: control and coordinating activities of the two other buses.  
+**Address bus**: Carry memory address
+**Data bus**: Carry data 
 
 ### Define software: 
 Computer programs that are when executed provides desired function and performance data structures that manipulate information and documents that describe the operation and use the program. 
