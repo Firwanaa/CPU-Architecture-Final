@@ -86,7 +86,7 @@ Control bus: control and coordinating activities of the two other buses.
 - 5- Using the call number, the kernel access a **dispatch table** containing pointers to service routines for various system calls.
 - 6- The relevant **service routine executes**, control returns to the user program after the trap instructions, and the mode switches back to user from system. 
 - 7- The library function processes the instruction after the trap, interprets kernel return value, and **return to the user** process.
-
+![](Pasted%20image%2020230814000847.png)
 ### Summery for the 7 steps by ChatGpt :
 - 1- User process calls a library function.
 - 2- Library function prepares system call parameters.
