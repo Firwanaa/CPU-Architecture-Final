@@ -3,36 +3,48 @@
 > #### He was flying, this what i was able to write down.
 
 ### CPU: Three sub-units:
-	- Control Unit
-	- Memeroy Unit
-	- Aritmitic Logical Unit 
-		  - Arithmitic operations: + , -, *, /
-		  - Logical: >, < , <=, <=, !=
+- Control Unit
+- Memory Unit
+- Arithmetic Logical Unit 
+	  - Arithmetic operations: + , -, *, /
+	  - Logical: >, < , <=, <=, !=
 
-### MCQ: Cash memory and RAM
-	- Ram is the Primary storage. Volatile storage, temporary storage. 
+### MCQ: Cash memory, ROM and RAM
+- RAM is the Primary storage. Volatile storage, temporary storage. 
+- ROM: Read-only memory, permanent, BIOS. 
+- Cache memory <- I have nothing so far.
+ 
+### Define Volatile Memory <- nothing in week 8:
+But it's a type of memory that maintain its data only while it's powered. If power is interrupted the data is lost. 
 
--Written: Define Voltile Memory
-- ROM, Permenanent Storage, BIOS
-
+### He mentioned this during the review for the first time. No clue what is the context. Have fun.. 
 - Firmware
 - Freeware
-- sharewareT
+- shareware
+### ChatGPTeed it:
+- **Firmware**: Firmware refers to software that is permanently programmed into a hardware device. It provides low-level control over the hardware and is typically not easily changeable by the end user.
+    
+- **Freeware**: Freeware refers to software that is available for use at no cost. Users can download and use freeware without having to pay a license fee.
+    
+- **Shareware**: Shareware is software that is distributed with the intention that users can try it before purchasing a license. Users often get a trial period or limited functionality for free, and if they decide to continue using the software with full features, they are usually required to purchase a license.
+    
 
-- System Bus:
-  - MCQ
-  - Written
+These terms describe different ways in which software is distributed and accessed by users.
+## System Bus:
+	MCQ
+	Written
+Control bus: control and coordinating activities of the two other buses.  
+    - Address bus: Carry memory address
+    - Data bus: Carry data 
 
-- Define software: Computer prgrams that are when executed provides desired function and performance
-                   , data structures that manipulate information and documents that describe the operation
-                    and use the program. 
+#### Define software: Computer programs that are when executed provides desired function and performance data structures that manipulate information and documents that describe the operation and use the program. 
 
-- System software:
-  - OS
-  - Utility
-    - Compiler: Converts the Whole program from high-level language into assebly language
-    - Interpreter: Converts and excute high-level program one line at a time (line by line)
-    - Assembler
+#### System software:
+- OS
+- Utility
+	- Compiler: Converts the Whole program from high-level language into assembly language
+	- Interpreter: Converts and excute high-level program one line at a time (line by line)
+	- Assembler
 
 - System software -> System request
 - Application -> user request
@@ -52,10 +64,8 @@
 
 - Distributed: Divide work between multiple processes
 
-----------------------------------------------------------
-
 - User mode: no IO operations allowed
-- Kernal mode: (privileged, OS mode, Supervised)
+- Kernel mode: (privileged, OS mode, Supervised)
   - IO operations
   - File operations 
   - Memory operations
@@ -68,7 +78,7 @@
   - Inforamtion maintenance
   - Communications
 
-- Semantics of System call execution:
+#### Semantics of System call execution:
   1- The user process calls a library function
   2- The library function sets system call parameters (including arguments, return, address, and call number) 
      in designated location like register or stack
@@ -78,7 +88,7 @@
   6- The relevant service routine executes, control returns to the user program after the trap instructions, and the mode swtiches back to user from system. 
   7- The library function processes the instruction after the trap, interprets kernal return value, and return to the user process.
 
-- Summery for the 7 steps by ChatGpt:
+### Summery for the 7 steps by ChatGpt:
  1- User process calls a library function.
  2- Library function prepares system call parameters.
  3- Trap instruction switches mode to kernel, yielding control to the OS.
@@ -88,6 +98,14 @@
  7- Library function interprets results, returns to user process.
 
  - Week 8- Slide (36)
+## Levels of Computer Architecture 
+- Level 6: User - Executable programs 
+- Level 5: High-Level Programming - C++, Java, Fortran, etc. 
+- Level 4: Assembly Language - Assembly code 
+- Level 3: System Software - Operating system, library code 
+- Level 2: Machine - Instruction Set Architecture 
+- Level 1: Control - Microcode or Hardwired 
+- Level 0: Digital Logic - Circuits, gates, etc.
 
  - Stack-based operations
   - LIFO ?
