@@ -1,6 +1,6 @@
 # CPU Architecture Final
 # Week 8
-## He was flying, this what i was able to write down.
+> #### He was flying, this what i was able to write down.
 
 ### CPU: Three sub-units:
 	- Control Unit
