@@ -97,7 +97,7 @@ Control bus: control and coordinating activities of the two other buses.
 - 7- Library function interprets results, returns to user process.
 
  - Week 8- Slide (36)
-## Levels of Computer Architecture 
+### Levels of Computer Architecture 
 - Level 6: User - Executable programs 
 - Level 5: High-Level Programming - C++, Java, FORTRAN, etc. 
 - Level 4: Assembly Language - Assembly code 
@@ -106,18 +106,12 @@ Control bus: control and coordinating activities of the two other buses.
 - Level 1: Control - Microcode or Hardwired 
 - Level 0: Digital Logic - Circuits, gates, etc.
 
-
-## Programming model
-- Determined by how processor, architecture deals with internal (CPU registers) and external RAM memory management during program execution.
-- Defines how instructions access their operands and how instructions are described in the processor's assembly language.
-# CPU Architecture Week 8 Summary
-
-## Programming Models
+### Programming Models
 
 - The **programming model** is determined by how the processor architecture manages internal (CPU registers) and external (RAM) memory during program execution.
 - It defines how instructions access operands and how instructions are described in the processor's assembly language.
 
-# Programming Models: Stack-Based and GPR Architectures
+### Programming Models: Stack-Based and GPR Architectures
 
 There are two primary programming models:
 
@@ -137,7 +131,7 @@ There are two primary programming models:
    - Implemented using memory buffers.
    - May lead to stack overflow error if data exceeds allocated space.
 
-## Advantages of Stack-Based Architectures
+### Advantages of Stack-Based Architectures
 
 - Instructions require fewer bits to encode.
 - Register management is automatic.
@@ -188,18 +182,18 @@ After ADD:
    - Instructions access operands from and write results to a random-access register set in the CPU.
    - Operands and results are specified by referencing register addresses.
 
-## Advantages of GPR Architectures
+### Advantages of GPR Architectures
 
 - GPR compilers provide better performance.
 
-# ISA and CPU Design Styles
+## ISA and CPU Design Styles
 
-## Different ISA for Different CPUs
+### Different ISA for Different CPUs
 
 - Different CPUs implement distinct sets of instructions.
 - Examples include ARM, Intel x86, IBM/Motorola PowerPC (Macintosh), MIPS, and Intel IA32.
 
-## Two CPU Design Styles
+### Two CPU Design Styles
 
 1. **RISC (Reduced Instruction Set Computing):**
    - Involves a small set of highly optimized instructions.
@@ -211,7 +205,7 @@ After ADD:
    - Some instructions can perform complex tasks directly.
    - Emphasizes code compactness.
 
-## Historical Comparison: RISC vs. CISC
+### Historical Comparison: RISC vs. CISC
 
 ### Complex Instruction Set Computing (CISC)
 - Examples: x86 architecture.
@@ -226,9 +220,9 @@ After ADD:
 - One instruction executed per clock cycle.
 - Instructions are of the same size and fixed.
 
-# Example: A = A * B
+### Example: A = A * B
 
-## RISC
+### RISC
 
 ```assembly
 LOAD A, eax
@@ -248,13 +242,12 @@ STORE ebx, A
 4. **STORE ebx, A**
    - Store the result from register ebx into variable A.
 
-## CISC
+### CISC
 ```assebly
 MULT B, A
 ```
 1. **MULT B, A**
    - Multiply the values of A and B to generate the result.
-
 
 - All models week 8 - slide (56)
 	- **Sequential Model**: The program counter (PC) defines total order on dynamic instruction 
@@ -296,3 +289,18 @@ add   C, R1               R1 = R1 + mem[C]
 add   R1, R2, R1          R1 = R1 + R2
 store R1, A               mem[A] = R1
 ```
+
+## Operands Models Pros and Cons:
+### Metric  I: Static code size
+- Number of instructions needed to represent program, size of each
+- Wants many implicit operands
+- **Rank Good -> Bad**: memory, accumulator, stack, load-store
+###  Metric  II: Data memory traffic
+- Number of bytes move to and from memory
+- Wants as many long-lived operands in on-chip storage
+- **Rank Good -> Bad**: load-store, stack, accumulator, memory
+### Metric  II: Cycles per instructions 
+- Want short (1 cycle), little variability, few nearby dependences
+- **Rank Good -> Bad**: load-store, stack, accumulator, memory
+
+**Upshot**: most new ISAs are load-store or hybrids.  
