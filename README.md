@@ -101,10 +101,9 @@ Computer programs that are when executed provides desired function and performan
 - 6- Service routine executes, control returns, and mode switches back to user.
 - 7- Library function interprets results, returns to user process.
 
- - Week 8- Slide (36)
  
 --------------------------------------------------
-### Levels of Computer Architecture 
+### Levels of Computer Architecture - Slide (36)
 - Level 6: User - Executable programs 
 - Level 5: High-Level Programming - C++, Java, FORTRAN, etc. 
 - Level 4: Assembly Language - Assembly code 
@@ -229,7 +228,7 @@ After ADD:
 - One instruction executed per clock cycle.
 - Instructions are of the same size and fixed.
 
-### Example: A = A * B
+### Example: A = A * B Slide (49)
 
 ### RISC
 
@@ -258,10 +257,10 @@ MULT B, A
 1. **MULT B, A**
    - Multiply the values of A and B to generate the result.
 
-- All models week 8 - slide (56)
-	- **Sequential Model**: The program counter (PC) defines total order on dynamic instruction 
-	- **Memory Only**: ***Slides are screenshots***
-		> Slide(55) where (other than memory) can operands come from? and how are they specified? **No Clue!!!*
+## All models week 8 - slide (54-59)
+- **Sequential Model**: The program counter (PC) defines total order on dynamic instruction 
+- **Memory Only**: ***Slides are screenshots***
+> Slide(55) where (other than memory) can operands come from? and how are they specified? **No Clue!!!*
 		> Example A = B + C
 		> Several options 
 		- memory only:
