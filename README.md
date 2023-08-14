@@ -29,7 +29,8 @@ But it's a type of memory that maintain its data only while it's powered. If pow
 - **Freeware**: Freeware refers to software that is available for use at no cost. Users can download and use freeware without having to pay a license fee.
     
 - **Shareware**: Shareware is software that is distributed with the intention that users can try it before purchasing a license. Users often get a trial period or limited functionality for free, and if they decide to continue using the software with full features, they are usually required to purchase a license.
-These terms describe different ways in which software is distributed and accessed by users.
+
+#### These terms describe different ways in which software is distributed and accessed by users.
 
 --------------------------------------------------
 ### System Bus:
