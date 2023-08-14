@@ -102,7 +102,6 @@ Computer programs that are when executed provides desired function and performan
 - 7- Library function interprets results, returns to user process.
  
 --------------------------------------------------
-
 ### Levels of Computer Architecture - Slide (36)
 - Level 6: User - Executable programs 
 - Level 5: High-Level Programming - C++, Java, FORTRAN, etc. 
@@ -111,8 +110,8 @@ Computer programs that are when executed provides desired function and performan
 - Level 2: Machine - Instruction Set Architecture 
 - Level 1: Control - Microcode or Hardwired 
 - Level 0: Digital Logic - Circuits, gates, etc.
-
 --------------------------------------------------
+
 ### Programming Models
 
 - The **programming model** is determined by how the processor architecture manages internal (CPU registers) and external (RAM) memory during program execution.
