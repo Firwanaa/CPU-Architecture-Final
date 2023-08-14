@@ -87,7 +87,7 @@ Control bus: control and coordinating activities of the two other buses.
 - 6- The relevant **service routine executes**, control returns to the user program after the trap instructions, and the mode switches back to user from system. 
 - 7- The library function processes the instruction after the trap, interprets kernel return value, and **return to the user** process.
 
-### Summery for the 7 steps by ChatGpt:
+### Summery for the 7 steps by ChatGpt :
 - 1- User process calls a library function.
 - 2- Library function prepares system call parameters.
 - 3- Trap instruction switches mode to kernel, yielding control to the OS.
