@@ -282,3 +282,17 @@ add                           stk[TOS++] = stk[--TOS] + stk[--TOS]
 pop A                         mem[A]     = stk[--TOS] 
 ```
 
+- **General-purpose register**: multiple explicit accumulator
+```
+load  B, R1               R1 = mem[B]
+add   C, R1               R1 = R1 + mem[C]
+store R1, A               mem[A] = R1
+```
+
+- **Load-store**: GPR and only load/stores access memory
+```
+load  B, R1               R1 = mem[B]
+add   C, R1               R1 = R1 + mem[C]
+add   R1, R2, R1          R1 = R1 + R2
+store R1, A               mem[A] = R1
+```
