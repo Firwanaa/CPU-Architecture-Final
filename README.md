@@ -119,7 +119,7 @@ Computer programs that are when executed provides desired function and performan
 
 ### Programming Models: Stack-Based and GPR Architectures
 
-There are two primary programming models:
+There are two primary programming models :
 
 1. **Stack-Based Architectures:**
    - Internal CPU register set is hidden from the program.
