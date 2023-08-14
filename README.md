@@ -137,7 +137,7 @@ There are two primary programming models :
    - Implemented using memory buffers.
    - May lead to stack overflow error if data exceeds allocated space.
 
-### Advantages of Stack-Based Architectures
+##### Advantages of Stack-Based Architectures
 
 - Instructions require fewer bits to encode.
 - Register management is automatic.
@@ -188,7 +188,7 @@ After ADD:
    - Instructions access operands from and write results to a random-access register set in the CPU.
    - Operands and results are specified by referencing register addresses.
 
-### Advantages of GPR Architectures
+##### Advantages of GPR Architectures
 
 - GPR compilers provide better performance.
 
