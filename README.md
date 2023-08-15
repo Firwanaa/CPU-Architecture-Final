@@ -273,6 +273,13 @@ Add B, C, A                  mem[A] = mem[B] + mem[C]
 load B                       ACC = mem[B]
 add  C                       ACC = ACC + mem[C]
 storage A                    mem[A] = ACC
+
+// Example form W9 - Slide(8)
+// A=B+(C*D)
+load C
+mul D
+add B
+store A
 ```
 
 - **Stack** : TOC implicit in instructions
@@ -317,3 +324,70 @@ store R1, A               mem[A] = R1
 --------------------------------------------------
 
 # Week 9
+### Infix and Postfix
+> Not sure: but i think he said will provide tree and ask us to write infix or postfix 
+![](Pasted%20image%2020230814194710.png)
+
+### B -> Byte and b -> bit
+
+### Slide(14) -> MCQ: the backward compatibility thingy 
+
+### Slide(16) 
+![](Pasted%20image%2020230815064346.png)
+##### 8-byte word in little-endian memory. (a) aligned (b) not aligned
+##### (b) have separate spaces for instructions and data. 
+
+### Slide(17) -> special-purpose registers 
+- Program Counter (PC)
+- Stack pointer
+#### Available only for kernel mode. They are used by the OS only, to control memory, I/O devices and hardware. 
+
+### Slide(18) -> Flags and PSW registers are hybrid (kernel/user modes)
+	-mcq
+	N -> Negative
+	Z -> Zero
+	V -> oVerflow
+	C -> Carry of the leftmost bit
+	A -> Carry out of bit 3.
+	P -> even Parity
+
+### Slide(20)
+		-mcq
+- 80386 first 32-bit machine in intel family. 
+- All subsequent CPUs have essentially same 32-bit architecture called `IA-32`.
+- The only major change after that bad boy (80386) was the introduction of `MMX` MultiMedia Extensions, `SSE` Streaming SIMD (Single Instruction Multiple Data)
+> From last quiz+W10: 
+> SIMD allows multiple data to be processed simultaneously 
+> SIMD exploits data-level parallelism 
+> Same instruction stream to multiple streams
+> High processing rate
+> Data-intensive 
+> Commonly used in multimedia applications (e.g.: )
+`side note: Data-level paralism when data is splitted and processed at same time, instruction level parallism is when the program itslef splitted and executed spererattly at the same time`
+`Not sure: Data must be homegenous`
+```
+//16-bit
+AX, BX, CX
+
+//32-bit
+EAX, EBX
+```
+
+### Slide(21) #mcq
+- Pentium 4 three operating modes:
+	- Real mode
+	- Protected mode
+	`mcq`
+		- Four privilege levels
+		- `mcq` **Level 0- kernel mode**
+		- `mcq` **Level 3- User mode**
+		- Level 1 and 2 rarely used
+	- System management mode (SMM)
+### Slide(25)
+- `mcq`**Byte Addressing** (Pentium 4): memory organised and accessed as sequence of bytes
+- `mcq`Byte address used to locate byte or bytes 
+- `mcq`The range of memory called **Address space**
+- `mcq`processor also supports **segmented addressing** this is a form of addressing where program have independent spaces called **segments**
+`He loves this example: How computer can handle program needs more memory than the available RAM?? answer is Virtual Memory 🤯 `
+
+
