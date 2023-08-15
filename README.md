@@ -615,6 +615,6 @@ $pipelinedTime =\frac{TimePerInstruction}{NumOfPipeStages}$
 	- $Unpipelined=5ns*100=500ns$ 
 	- $Pipelined=\frac{500}{5}=100ns$
 	- $speedUp=\frac{Unpiplined}{Pipelined}=\frac{500}{100}=5 times$
-
+ 
 ### Slide(37)
 - Pipeline overhead arises from combination of ***pipeline register delay*** and ***clock skew.*** 
