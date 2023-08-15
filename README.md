@@ -410,9 +410,46 @@ EAX, EBX
 		- Faults
 		- Traps
 		- Aborts
+`Processor respond to interrups and exceptions in essentially the same way. When intterupt of exception is signalled, the processor halts execution of current program and switches to handler procedure that has been written specifically to handle the the interrupt or exception`
+- The processor accesses the handler procedure through and entry in the **interrupt descriptor table (IDT) ❤️**
+- When the handler complete handling, control returned to the interrupted program. 
+### Slide(34)
+`conflict` `mcq` `FYI`
+- Intel Architecture defines `16` predefined interrupts and exceptions and `224` user defined interrupts, which are associated with entries in the IDT ❤️, identified with a number called vector. 
+### Side(40)
+- `mcq`UltraSPARC III architecture is LOAD/STORE architecture 
+
+### Side(42)
+#### JVM ISA level
+- `mcq`Byte order is `big-endian`
+- `mcq`JVM contains extra region in memory, `the heap`, used by runtime storage allocator 🐊 for storage of dynamic and large object. 
+
+### Side(52)
+- `mcq` UltraSPARC has 31 different instruction formats. 
 
 
+### Side(56)
+#### Addressing modes: `written question`
+- **Immediate**: The address part contains the value of the operand itself
+`add r1, #5` `r1 <- r1+5`
+- **Direct**: address field contains the actual full address memory of the operand
+`add r1, (0x200)`  `r1 <- r1 + M[0x200]`
+- **Register Addressing**: Same as direct but it specifies the register instead of memory location 
+`add r1, r2`  `r1 <- r1 + r2`
+- **Register Indirect**: Instruction refers to the address contained in the register (pointer)
+`add r1, (r2)`  `r1 <- r1 + M[r2]`
+- **Displacement**
+`add r1, 100(r2)` `r1 <- r1 + M[r2+100]`
+- **Indexed**:
+`add r1, (r2+r3)`  `r1 <- r1 + M[r1+r3]`
 
+### Slide(65)
+- `not important but I have it written muliple times`
+- Pentium 4: `Mov R1, R2 --> MOV DES, SRC`
 
-
-
+### Slide(72)
+#### Flow of control: `written question`
+![](Pasted%20image%2020230815083626.png)
+- Not sure what kind of questions here !!! 🤷🏽
+- (a) program counter: sequential without branches, means no jumps
+- (b) program counter with branches, means with jumps 
