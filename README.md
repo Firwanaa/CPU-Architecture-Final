@@ -2,7 +2,8 @@
 # Week 8
 > #### He was flying, this what i was able to write down.
 
-### CPU: Three sub-units:
+### Slide(6)
+#### CPU: Three sub-units:
 - Control Unit
 - Memory Unit
 - Arithmetic Logical Unit 
@@ -10,7 +11,8 @@
 	  - Logical: >, < , <=, <=, !=
 
 --------------------------------------------------
-### MCQ: Cash memory, ROM and RAM
+### Slide(8)
+#### MCQ: Cash memory, ROM and RAM
 - RAM is the Primary storage. Volatile storage, temporary storage. 
 - ROM: Read-only memory, permanent, BIOS. 
 - Cache memory <- I have nothing so far.
@@ -18,8 +20,21 @@
 ### Define Volatile Memory <- nothing in week 8:
 But it's a type of memory that maintain its data only while it's powered. If power is interrupted the data is lost. 
 
+### Slide(9)
+#### System Bus:
+	MCQ
+	Written
+**Control bus**: control and coordinating activities of the two other buses.  
+**Address bus**: Carry memory address
+**Data bus**: Carry data 
+### Slide(10)
+`written question`
+### Define software: 
+Computer programs that are when executed provides desired function and performance data structures that manipulate information and documents that describe the operation and use the program. 
+
 --------------------------------------------------
-### He mentioned this during the review for the first time. No clue what is the context. Have fun.. 
+### Slide(11)
+#### He mentioned this during the review for the first time. No clue what is the context. Have fun.. 
 - Firmware
 - Freeware
 - shareware
@@ -33,16 +48,6 @@ But it's a type of memory that maintain its data only while it's powered. If pow
 #### These terms describe different ways in which software is distributed and accessed by users.
 
 --------------------------------------------------
-### System Bus:
-	MCQ
-	Written
-**Control bus**: control and coordinating activities of the two other buses.  
-**Address bus**: Carry memory address
-**Data bus**: Carry data 
-
-### Define software: 
-Computer programs that are when executed provides desired function and performance data structures that manipulate information and documents that describe the operation and use the program. 
-
 #### System software:
 - OS
 - Utility
@@ -51,13 +56,17 @@ Computer programs that are when executed provides desired function and performan
 	- Assembler
 
 --------------------------------------------------
+## Slide(random(1-78))
+`Tried to orgnize it as much as I can, he was jumping around`
 - System software -> System request
 - Application -> user request
 
 - CPU only process information in RAM, means It doesn't read from hard-drive or any secondary storage.(u know read/write speed and some other stuff). 
+### Slide(13)
 - 1945 - 1955 no operating system, no translation programs needed because we were using machine language to write programs.
 - No Utility software: Because we were programming in machine language babe, compilers for noobs.  
 
+### Slide(17)
 - Monogramming: loads ONE instruction to CPU, have to SWAP each time need to process new instruction
 - Multiprogramming: can have many processes at a time, CPU can SWITCH to a different instructions. 
 
@@ -68,14 +77,14 @@ Computer programs that are when executed provides desired function and performan
   - share of resources 
 
 - Distributed: Divide work between multiple processes
-
+### Slide(25)
 - User mode: no IO operations allowed
 - Kernel mode: (privileged, OS mode, Supervised)
   - IO operations
   - File operations 
   - Memory operations
 - System call: user ask OS to switch from user mode to kernal mode (TRAP instruction)
-
+### Slide(28)
 - Types of System calls:
   - Process control
   - File management
@@ -83,6 +92,7 @@ Computer programs that are when executed provides desired function and performan
   - Information maintenance
   - Communications
 -------------------------------------------------------------------
+### Slide(29-31)
 #### Semantics of System call execution: 100% in the final 
 - 1- The user process calls a **library function**
 - 2- The library function sets **system call parameters** (including arguments, return, address, and call number) in designated location like register or stack
@@ -92,7 +102,7 @@ Computer programs that are when executed provides desired function and performan
 - 6- The relevant **service routine executes**, control returns to the user program after the trap instructions, and the mode switches back to user from system. 
 - 7- The library function processes the instruction after the trap, interprets kernel return value, and **return to the user** process.
 ![](Pasted%20image%2020230814000847.png)
-### Summery for the 7 steps by ChatGpt :
+#### Summery for the 7 steps by ChatGpt :
 - 1- User process calls a library function.
 - 2- Library function prepares system call parameters.
 - 3- Trap instruction switches mode to kernel, yielding control to the OS.
@@ -102,7 +112,9 @@ Computer programs that are when executed provides desired function and performan
 - 7- Library function interprets results, returns to user process.
  
 --------------------------------------------------
-### Levels of Computer Architecture - Slide (36)
+### Slide(36)
+`mcq`
+#### Levels of Computer Architecture - Slide (36)
 - Level 6: User - Executable programs 
 - Level 5: High-Level Programming - C++, Java, FORTRAN, etc. 
 - Level 4: Assembly Language - Assembly code 
@@ -111,13 +123,15 @@ Computer programs that are when executed provides desired function and performan
 - Level 1: Control - Microcode or Hardwired 
 - Level 0: Digital Logic - Circuits, gates, etc.
 --------------------------------------------------
-
-### Programming Models
+### Slide(39)
+`no mark`
+#### Programming Models
 
 - The **programming model** is determined by how the processor architecture manages internal (CPU registers) and external (RAM) memory during program execution.
 - It defines how instructions access operands and how instructions are described in the processor's assembly language.
 
-### Programming Models: Stack-Based and GPR Architectures
+### Slide(39-45)
+#### Programming Models: Stack-Based and GPR Architectures
 
 There are two primary programming models :
 
@@ -142,7 +156,7 @@ There are two primary programming models :
 - Instructions require fewer bits to encode.
 - Register management is automatic.
 - Instruction set remains unchanged.
-
+## Slide(43) `written question`
    **Example: Compute 3*7+2**
 ```assembly
    PUSH 2
@@ -193,14 +207,14 @@ After ADD:
 - GPR compilers provide better performance.
 
 --------------------------------------------------
-## ISA and CPU Design Styles
+#### ISA and CPU Design Styles
 
-### Different ISA for Different CPUs
+#### Different ISA for Different CPUs
 
 - Different CPUs implement distinct sets of instructions.
 - Examples include ARM, Intel x86, IBM/Motorola PowerPC (Macintosh), MIPS, and Intel IA32.
 
-### Two CPU Design Styles
+#### Two CPU Design Styles
 
 1. **RISC (Reduced Instruction Set Computing):**
    - Involves a small set of highly optimized instructions.
@@ -212,24 +226,25 @@ After ADD:
    - Some instructions can perform complex tasks directly.
    - Emphasizes code compactness.
 
-### Historical Comparison: RISC vs. CISC
+#### Historical Comparison: RISC vs. CISC
 
-### Complex Instruction Set Computing (CISC)
+#### Complex Instruction Set Computing (CISC)
 - Examples: x86 architecture.
 - Larger instruction set with intricate instructions built into hardware.
 - Variable length instructions.
 - Multiple clock cycles per instruction.
 
-### Reduced Instruction Set Computing (RISC)
+#### Reduced Instruction Set Computing (RISC)
 - Examples: ARM architecture.
 - Smaller, highly optimized set of instructions.
 - Specific memory access instructions.
 - One instruction executed per clock cycle.
 - Instructions are of the same size and fixed.
+### Slide(49)
+`important`
+#### Example: A = A * B Slide (49)
 
-### Example: A = A * B Slide (49)
-
-### RISC
+#### RISC
 
 ```assembly
 LOAD A, eax
@@ -249,15 +264,21 @@ STORE ebx, A
 4. **STORE ebx, A**
    - Store the result from register ebx into variable A.
 
-### CISC
+#### CISC
 ```assebly
 MULT B, A
 ```
 1. **MULT B, A**
    - Multiply the values of A and B to generate the result.
+### Slide(52)
+- `mcq`What makes good ISA?
+	- Programmability
+	- Implementability
+	- Compatibility
 
 --------------------------------------------------
-## All models week 8 - slide (54-59)
+### All models week 8 - slide (54-59)
+`important`
 - **Sequential Model**: The program counter (PC) defines total order on dynamic instruction 
 - **Memory Only**: ***Slides are screenshots***
 > Slide(55) where (other than memory) can operands come from? and how are they specified? **No Clue!!!*
@@ -268,6 +289,7 @@ MULT B, A
 Add B, C, A                  mem[A] = mem[B] + mem[C]
 ```
 
+`Exam question`
 - **Accumulator**: Implicit single element storage
 ```
 load B                       ACC = mem[B]
@@ -305,16 +327,19 @@ add   R1, R2, R1          R1 = R1 + R2
 store R1, A               mem[A] = R1
 ```
 
-## Operands Models Pros and Cons:
-### Metric  I: Static code size
+
+### Slide(59)
+`most important`
+#### Operands Models Pros and Cons:
+#### Metric  I: Static code size
 - Number of instructions needed to represent program, size of each
 - Wants many implicit operands
 - **Rank Good -> Bad**: memory, accumulator, stack, load-store
-###  Metric  II: Data memory traffic
+####  Metric  II: Data memory traffic
 - Number of bytes move to and from memory
 - Wants as many long-lived operands in on-chip storage
 - **Rank Good -> Bad**: load-store, stack, accumulator, memory
-### Metric  II: Cycles per instructions 
+#### Metric  II: Cycles per instructions 
 - Want short (1 cycle), little variability, few nearby dependences
 - **Rank Good -> Bad**: load-store, stack, accumulator, memory
 
@@ -324,6 +349,7 @@ store R1, A               mem[A] = R1
 --------------------------------------------------
 
 # Week 9
+### Week 8 Slide (71)
 ### Infix and Postfix
 > Not sure: but i think he said will provide tree and ask us to write infix or postfix 
 ![](Pasted%20image%2020230814194710.png)
@@ -501,3 +527,11 @@ When coroutine is resumed, execution begins at the statement where it left off t
 ### Slide(78)
 `conflict` `FYI` `Question`
 - Each interrupt has priority (vector), I assume it's defined in the lovely IDT table. 
+
+
+
+--------------------------------------------------
+--------------------------------------------------
+
+# Week 10
+
