@@ -1,4 +1,8 @@
 # CPU Architecture Final - Part 2 - Sheridan College - SYST27198
+# ![](helmt.png)
+# 🚧 🏗️
+### ⚠️️️ This repo still under construction, Use with high caution, Wear Safety Helmet 👷 ⛔
+# 🚧 🏗️
 # Week 8
 > #### He was flying, this what i was able to write down.
 
@@ -413,7 +417,7 @@ EAX, EBX
 - `mcq`Byte address used to locate byte or bytes 
 - `mcq`The range of memory called **Address space**
 - `mcq`processor also supports **segmented addressing** this is a form of addressing where program have independent spaces called **segments**
-`He loves this example: How computer can handle program needs more memory than the available RAM?? answer is Virtual Memory 🤯 `
+`He loves this example: How computer can handle a program needs more memory than the available RAM?? answer is Virtual Memory 🤯 `
 
 ### Slide(28):
 | Type of re         | Register used | Segment used                  | Default selection rule            |
@@ -528,10 +532,80 @@ When coroutine is resumed, execution begins at the statement where it left off t
 `conflict` `FYI` `Question`
 - Each interrupt has priority (vector), I assume it's defined in the lovely IDT table. 
 
-
-
 --------------------------------------------------
 --------------------------------------------------
 
 # Week 10
 
+### Slide(3)
+`mcq + written`
+#### Data-level Parallelism DLP: 
+many data items that can be operated at the same time.
+#### ILP Instruction-level Parallelism: Function or Control parallelism
+tasks "instructions" can be operate independently and largely in parallel. 
+`multiprocessor`
+
+### Slide(10)
+#### ISA `mcq`
+- Operations:
+	- Data transfer
+	- arithmetic logical
+	- control and floating point
+- Control flow instructions:
+	- All ISAs support
+		- Conditional jumps
+		- Unconditional jumps
+		- Procedure calls
+		- returns
+- Encoding:
+	- Two basic choices on encoding 
+		- fixed length and variable length
+		- All MIPS instructions are 32 bit long
+### Slide(12)
+`mcq`
+- Consider two different computers X and Y
+- Performance
+$$
+n = \frac {Execution time_y}{Execution time_x} = \frac{\frac{1}{Performance_y}}{\frac{1}{Performance_X}} =\frac{performance_x}{performance_y} 
+$$
+### Slide(13)
+- `mcq`Execution time
+	- Wall-clock time
+	- response time
+	- elapsed time <- which is the latency to complete a task `seen by the user not the CPU time`
+
+
+### Slide(21)
+## Pipelining
+- A technology of decomposing a sequential process into suboperation, with each suboperation completed dedicated in segment. 
+- Pipe lining doesn't help latency of single task, it helps throughput of entire workload. 
+- Pipeline rate limited by slowest pipeline stage.
+- Unbalanced length of pipe stages reduces speed-up. 
+- Time to "fill" and "drain" reduce the speed-up.
+- Stall for Dependence 
+### Slide(26)
+`mcq`
+- In computing a pipeline is a set of data processing elements connected in series, so that the output of one element is the input of the next one. 
+- Elements of pipeline are often executed in parallel or in time-sliced fashion. 
+- Today, pipelining is the key implementation technique used to make fast CPUs.
+- Conventional microprocessors are **synchronous** circuits that used buffered synchronous pipelines
+- Pipeline Registers are inserted in-between pipeline stages, and are clocked synchronously. 
+- There is **Asynchronous Pipelines** with pipeline registers clocked Asynchronously
+- **unbuffered pipelines** called "wave pipelines"
+- 
+- **Pipelining** is an implementation technique whereby multiple instructions are overlapped in execution. 
+## Mrinal notes
+#### Example question: (with traditional pipeline)
+|      | 30   | 30   | 30     | 30     | 30     | 30     |
+|------|------|------|--------|--------|--------|--------|
+| Car1 | wash | dry  | polish |        |        |        |
+| Car2 |      | wash | dry    | polish |        |        |
+| Car3 |      |      | wash   | dry    | polish |        |
+| Car4 |      |      |        | wash   | dry    | polish |
+
+- Total Time $= 3 hours$
+- Without pipeline = 1.5 (total of 3 stages) x # of cars = 6 hours
+
+
+### Slide(37)
+- Pipeline overhead arises from combination of ***pipeline register delay*** and ***clock skew.*** 
