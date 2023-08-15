@@ -453,3 +453,32 @@ EAX, EBX
 - Not sure what kind of questions here !!! 🤷🏽
 - (a) program counter: sequential without branches, means no jumps
 - (b) program counter with branches, means with jumps 
+
+### Slide(73)
+ 🫤 `written question`
+
+> I assume he means Subroutines vs Coroutines 
+#### Procedures: function or subroutine
+```python
+
+def add_numbers(a, b):
+    return a + b
+
+```
+
+![](Pasted%20image%2020230815084404.png)
+- When procedure called, execution of procedure always begins at the first statement of the procedure.
+#### Coroutines
+
+```python
+import asyncio
+
+async def hello_world():
+    print("Hello")
+    await asyncio.sleep(1)
+    print("World")
+
+asyncio.run(hello_world())
+```
+![](Pasted%20image%2020230815084418.png)
+When coroutine is resumed, execution begins at the statement where it left off the previous time not the beginning. 
