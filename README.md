@@ -598,7 +598,7 @@ $$
 - `mcq` In fact it usually slightly increases the execution time of each instruction due to overhead in the control of the pipeline.
 - `mcq`The increase in instruction throughput means that the program runs faster and has lower total execution time, even thought no single instruction runs faster. 
 - `mcq` imbalance among pipeline stages reduce performance. 
-## Mrinal notes
+## Mrinal notes /// start
 #### Example question: (with traditional pipeline)
 |      | 30   | 30   | 30     | 30     | 30     | 30     |
 |------|------|------|--------|--------|--------|--------|
@@ -640,5 +640,29 @@ $pipelinedTime =\frac{TimePerInstruction}{NumOfPipeStages}$
 - Pipeline Overhead = pipeline register delay + clock skew. 
 - Once clock cycle is as small as the sum of the clock skew and latch overhead. NO further pipelining is useful. 
 
-### Slide(38) cont' Mrinal Notes
-$AvgInstruction$
+### Slide(38,39) cont' Mrinal Notes
+![](Pasted%20image%2020230815191341.png)
+$AvgInstruction=ClockCycle*AvgCPI$
+$AvgIns=1ns*(\frac{4*40}{100} + \frac{4*20}{100} +\frac{5*40}{100})$
+$Unpipelined=1ns*(4.4)=4.4ns$
+$Pipelined=1+0.2ns=1.2ns$
+
+>note: In pipelined stage, the clock must run at the speed of the slowest stage plus overhead
+
+$speedup=\frac{Unpipelined}{pipelined}=\frac{4.4}{1.2}=3.7 times$
+
+
+## Mrinal notes /// end
+
+### Slide(41)
+#### Pipeline Hazards: Situation prevents next instruction from executing during its designated clock cycle. 
+- Structural Hazard: **resource conflict**,when hardware can not support all possible combinations simultaneously
+	- solved by:
+	  - Renaming
+	  - stalling
+	  - bubbling
+- Data Hazards: **Instruction depends** on the result of a previous instruction because of overlapping
+	- solved by:
+		- Forwarding
+		- Stalling
+- Control Hazard: arise from the pipelining of branches and another instructions that change the PC.  
