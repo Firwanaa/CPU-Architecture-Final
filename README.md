@@ -373,11 +373,10 @@ AX, BX, CX
 EAX, EBX
 ```
 
-### Slide(21) #mcq
+### Slide(21)
 - Pentium 4 three operating modes:
 	- Real mode
 	- Protected mode
-	`mcq`
 		- Four privilege levels
 		- `mcq` **Level 0- kernel mode**
 		- `mcq` **Level 3- User mode**
@@ -389,5 +388,20 @@ EAX, EBX
 - `mcq`The range of memory called **Address space**
 - `mcq`processor also supports **segmented addressing** this is a form of addressing where program have independent spaces called **segments**
 `He loves this example: How computer can handle program needs more memory than the available RAM?? answer is Virtual Memory 🤯 `
+
+### Slide(28):
+| Type of re         | Register used | Segment used                  | Default selection rule            |
+|--------------------|---------------|-------------------------------|-----------------------------------|
+| Instruction        | CS            | code segment                  | Instruction fetch                 |
+| `mcq`Stack         | SS            | stack segment                 | stack ops. PUSH/PULL              |
+| Local Data         | DS            | Data segment                  | Data references                   |
+| Destination String | ES            | Data segment pointed to by ES | Destination of string instruction |
+
+### Slide(29)
+`not sure: probably AX is 16-bit (AH,AL) vs EAX which is 16-bit`
+- In Pentium 4: **EIP** instruction pointer
+- In RISC it's called **PC** (program counter)
+
+
 
 
