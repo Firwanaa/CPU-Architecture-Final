@@ -594,6 +594,10 @@ $$
 - **unbuffered pipelines** called "wave pipelines"
 - 
 - **Pipelining** is an implementation technique whereby multiple instructions are overlapped in execution. 
+- `mcq`**Pipelining** increases the CPU instruction throughput, but it does not reduce the execution of an individual instruction. 
+- `mcq` In fact it usually slightly increases the execution time of each instruction due to overhead in the control of the pipeline.
+- `mcq`The increase in instruction throughput means that the program runs faster and has lower total execution time, even thought no single instruction runs faster. 
+- `mcq` imbalance among pipeline stages reduce performance. 
 ## Mrinal notes
 #### Example question: (with traditional pipeline)
 |      | 30   | 30   | 30     | 30     | 30     | 30     |
@@ -615,6 +619,26 @@ $pipelinedTime =\frac{TimePerInstruction}{NumOfPipeStages}$
 	- $Unpipelined=5ns*100=500ns$ 
 	- $Pipelined=\frac{500}{5}=100ns$
 	- $speedUp=\frac{Unpiplined}{Pipelined}=\frac{500}{100}=5 times$
- 
+- #### (c) Show how pipeline occurs in RISC for 5 instructions if each takes 1 ns, calculate total time:
+|        | 1  | 2  | 3  | 4   | 5   | 6   | 7   | 8   | 9  |
+|--------|----|----|----|-----|-----|-----|-----|-----|----|
+| ins#1  | IF | ID | Ex | MEM | WB  |     |     |     |    |
+| int#2  |    | IF | ID | Ex  | MEM | WB  |     |     |    |
+| ins#3  |    |    | IF | ID  | Ex  | MEM | WB  |     |    |
+| ins#4  |    |    |    | IF  | ID  | Ex  | MEM | WB  |    |
+| inst#5 |    |    |    |     | IF  | ID  | EX  | MEM | WB |
+- Total time = 9 ns. 
+#### RISC
+- RISC takes at most 5 clock Cycles
+- Instruction Fetch (IF)
+- Instruction Decode (ID)
+- Execution (Ex)
+- Memory access (MEM)
+- Write-back cycle (WB)
 ### Slide(37)
 - Pipeline overhead arises from combination of ***pipeline register delay*** and ***clock skew.*** 
+- Pipeline Overhead = pipeline register delay + clock skew. 
+- Once clock cycle is as small as the sum of the clock skew and latch overhead. NO further pipelining is useful. 
+
+### Slide(38) cont' Mrinal Notes
+$AvgInstruction$
