@@ -456,6 +456,7 @@ EAX, EBX
 
 ### Slide(73)
  🫤 `written question`
+> I added the code blocks, not from his notes
 
 > I assume he means Subroutines vs Coroutines 
 #### Procedures: function or subroutine
@@ -482,3 +483,21 @@ asyncio.run(hello_world())
 ```
 ![](Pasted%20image%2020230815084418.png)
 When coroutine is resumed, execution begins at the statement where it left off the previous time not the beginning. 
+
+
+### Slide(75)
+- Trap is an automatic procedure call initiated by some conditions caused by the program.
+- The flow of control switched to procedure called `Trap handler`
+
+### Slide(76)
+- `mcq` interrupts are change in the flow of control caused by event, usually related to I/O.
+
+### Slide(77) 
+`not marked as potential question`
+- Taps are `Syncronus` <- mentioned before as one type of exceptions
+- Interrupts are `Asyncronus`
+
+
+### Slide(78)
+`conflict` `FYI` `Question`
+- Each interrupt has priority (vector), I assume it's defined in the lovely IDT table. 
