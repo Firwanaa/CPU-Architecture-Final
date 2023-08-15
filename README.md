@@ -605,7 +605,16 @@ $$
 
 - Total Time $= 3 hours$
 - Without pipeline = 1.5 (total of 3 stages) x # of cars = 6 hours
+- $Pipelined=\frac{6}{3}=2$
+- (a) If the time b/w pipelines is same then:
+$pipelinedTime =\frac{TimePerInstruction}{NumOfPipeStages}$
 
+- #### (b) Example Question: 
+	- 5 stages each take 1 ns, how much time would 100 instructions take pipelined & unpipelined & what is the speedup?
+	- stages=5, time per stage= 1 ns, # of instruction = 100. 
+	- $Unpipelined=5ns*100=500ns$ 
+	- $Pipelined=\frac{500}{5}=100ns$
+	- $speedUp=\frac{Unpiplined}{Pipelined}=\frac{500}{100}=5 times$
 
 ### Slide(37)
 - Pipeline overhead arises from combination of ***pipeline register delay*** and ***clock skew.*** 
