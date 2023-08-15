@@ -399,8 +399,19 @@ EAX, EBX
 
 ### Slide(29)
 `not sure: probably AX is 16-bit (AH,AL) vs EAX which is 16-bit`
-- In Pentium 4: **EIP** instruction pointer
+### Slide(30)
+- In Pentium 4: **EIP** Extended instruction pointer
 - In RISC it's called **PC** (program counter)
+### Slide(32)
+#### Interrupts and Exceptions 
+- Two mechanisms for interrupting program execution:
+	- **Interrupts**: ***Asynchronous*** -> triggered by I/O device
+	- **Exception**: ***Synchronous*** -> generated when detect predefined condition, has 3 types:
+		- Faults
+		- Traps
+		- Aborts
+
+
 
 
 
