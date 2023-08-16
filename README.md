@@ -20,7 +20,8 @@
 - RAM is the Primary storage. Volatile storage, temporary storage. 
 - ROM: Read-only memory, permanent, BIOS. 
 - Cache memory <- I have nothing so far.
- 
+### From Carrie
+![](Pasted%20image%2020230815212334.png)
 ### Define Volatile Memory <- nothing in week 8:
 But it's a type of memory that maintain its data only while it's powered. If power is interrupted the data is lost. 
 
@@ -659,10 +660,69 @@ $speedup=\frac{Unpipelined}{pipelined}=\frac{4.4}{1.2}=3.7 times$
 - Structural Hazard: **resource conflict**,when hardware can not support all possible combinations simultaneously
 	- solved by:
 	  - Renaming
-	  - stalling
+	  - stalling: Stall the pipeline for 1 clock cycle. A stall commonly called a pipeline bubble or just bubble.
 	  - bubbling
-- Data Hazards: **Instruction depends** on the result of a previous instruction because of overlapping
+- `written`Data Hazards: **Instruction depends** on the result of a previous instruction because of overlapping
+	- Data Hazard occur when the pipeline changes the order of read/write accesses to operands so that the order differs from the order seen by sequentially executing instructions on unpipelined processor. 
 	- solved by:
-		- Forwarding
+		- Forwarding also called bypassing or short-circuiting
 		- Stalling
-- Control Hazard: arise from the pipelining of branches and another instructions that change the PC.  
+```arm
+DADD R1, R2, R3
+DSUB R4, R1, R5
+AND  R6, R1, R7
+OR   R8, R1, R9
+XOR  R10, R1,R11
+```
+
+- All instructions after the `DADD` use the result of `DADD`
+- The `DADD` write value to `R1` at `WB` stage
+- `DSUB` reads the value during `ID`
+
+
+- `no mark`Control Hazard: arise from the **pipelining of branches** and another instructions that change the PC.  
+	- Can cause greater performance loss for MIPS pipeline than data hazard
+
+### Slide(59)
+- If all instructions take the same number of cycles, which must also equal the number of pipeline stages:
+  $speedup=\frac{pipelineDepth}{1+pipelineStallCyclePerInstruction}$
+
+### Slide(68)
+- Simplest and most common way to exploit parallelism among iterations of loop, which is called loop-level parallelism. 
+`mcq`
+```python
+for(i=0; i<= 999; i=i+1)
+	x[i] = x[i]+y[i];
+```
+- Every iteration of the loop can overlap with any other iteration
+- Unrolling the loop statically by the compiler or dynamically by the hardware. 
+### Slide(69)
+- Important alternative to loop-level parallelism is use of **SIMD** 
+
+### Slide(70)
+#### SMID
+`mcq + written`SMID machine are capable of applying the exact same instructions stream to multiple streams of data simultaneously. 
+- High processing rate
+
+### Slide(73)
+`no mark`
+- Data dependence
+- Name dependence
+- Control dependence
+
+### Slide(74)
+- `mcq`Data Dependence
+	- Data dependence conveys three things:
+		- The possibility of hazard
+		- The order in which results must be calculated and
+		- An upper bound on how much parallelism can be exploited. 
+   - `written`A data dependence can be overcomed in two ways:
+	   - Maintaining the dependence but avoiding the hazard (Forwarding)
+	   - Eliminating dependence by transforming the code.
+
+### Slide(75)
+- Name dependence
+	- when two instructions use the same register of memory location called `name`
+
+- `mcq`An Antidependence: when instruction j writes a register or memory locaton that instruction i read. 
+- An output dependence: when instruction i and instruction j write the same register or memory location. 
