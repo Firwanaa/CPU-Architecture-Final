@@ -733,7 +733,7 @@ for(i=0; i<= 999; i=i+1)
 	- WAR (Write After Read)
 `RAR (Rread After Read) case is not a hazard`
 
-### Slide(80) <- read it, no energy to type anymore. 
+### Slide(80) <- read it, no energy to type anymore.
 `mcq`
 - example
 ```python
@@ -745,3 +745,35 @@ if p2 {
 };
 ```
 
+
+
+--------------------------------------------------
+--------------------------------------------------
+
+# Week 12
+
+### Slide(4)
+## `MCQ`
+- #. of transistors doubles appox. every two years
+### Slide(7)
+- Superscalar CPU design complex:
+	- Instruction dependencies 
+	- Resource allocation 
+### Slide(9)
+- Virtual Memeroy
+	- Paging and Segmentation 
+### Slide(10)
+- Multicore CPU
+	- Video Rendering
+	- Scientific simulations
+### Slide(12)
+- Hyperthreading
+	- Video editing
+	- Gaming
+### Slide(15)
+- Vector Processing
+	- Scientific simulation 
+	- computer graphics 
+### Slide(16)
+- SIMD
+	- Homogeneous data
