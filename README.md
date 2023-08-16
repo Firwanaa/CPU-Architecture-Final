@@ -724,5 +724,24 @@ for(i=0; i<= 999; i=i+1)
 - Name dependence
 	- when two instructions use the same register of memory location called `name`
 
-- `mcq`An Antidependence: when instruction j writes a register or memory locaton that instruction i read. 
+- `mcq`An Antidependence: when instruction j writes a register or memory location that instruction i read. 
 - An output dependence: when instruction i and instruction j write the same register or memory location. 
+### Slide(78)
+- Data Hazards
+	- RAW (Read After Write)
+	- WAW (Write After Write)
+	- WAR (Write After Read)
+`RAR (Rread After Read) case is not a hazard`
+
+### Slide(80) <- read it, no energy to type anymore. 
+`mcq`
+- example
+```python
+if p1{
+	  s1;
+	  };
+if p2 {
+	 s2;   
+};
+```
+
