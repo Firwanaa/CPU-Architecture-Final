@@ -56,7 +56,7 @@ Computer programs that are when executed provides desired function and performan
 #### System software:
 - OS
 - Utility
-	- Compiler: Converts the Whole program from high-level language into assembly language (machine language)
+	- Compiler: Converts the Whole program from high-level language into assembly language and then **machine language**
 	- Interpreter: Converts and execute high-level program one line at a time (line by line)
 	- Assembler
 
