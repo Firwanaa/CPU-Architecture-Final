@@ -429,7 +429,7 @@ EAX, EBX
 | Destination String | ES            | Data segment pointed to by ES | Destination of string instruction |
 
 ### Slide(29)
-`not sure: probably AX is 16-bit (AH,AL) vs EAX which is 16-bit`
+`not sure: probably AX is 16-bit (AH,AL) vs EAX which is 32-bit`
 ### Slide(30)
 - In Pentium 4: **EIP** Extended instruction pointer
 - In RISC it's called **PC** (program counter)
