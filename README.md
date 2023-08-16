@@ -56,7 +56,7 @@ Computer programs that are when executed provides desired function and performan
 #### System software:
 - OS
 - Utility
-	- Compiler: Converts the Whole program from high-level language into assembly language
+	- Compiler: Converts the Whole program from high-level language into assembly language (machine language)
 	- Interpreter: Converts and execute high-level program one line at a time (line by line)
 	- Assembler
 
@@ -162,7 +162,7 @@ There are two primary programming models :
 - Register management is automatic.
 - Instruction set remains unchanged.
 ## Slide(43) `written question`
-   **Example: Compute 3*7+2**
+   **Example: Compute $3*7+2$**
 ```assembly
    PUSH 2
    PUSH 7
